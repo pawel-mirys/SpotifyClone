@@ -1,0 +1,117 @@
+// -------------Fonts-------------
+@font-face {
+  font-family: 'CircuralStdBold';
+  src: local('CircuralStdBold'),
+    url(./assets/fonts/CircularStd-Black.otf) format('opentype');
+}
+@font-face {
+  font-family: 'CircuralStd';
+  src: local('CircuralStd'),
+    url(./assets/fonts/CircularStd-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'CircuralStdLight';
+  src: local('CircuralStdLight'),
+    url(./assets/fonts/CircularStd-Light.otf) format('opentype');
+}
+
+// -------------Text Styles-------------
+// Headers
+@mixin Header1 {
+  font-size: 80px;
+  line-height: 96px;
+  font-family: CircuralStdBold;
+}
+@mixin Header2 {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: CircuralStdBold;
+}
+@mixin Header3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: CircuralStdBold;
+}
+@mixin Header4 {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: CircuralStdBold;
+}
+@mixin Header5 {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: CircuralStdBold;
+}
+@mixin Header6 {
+  font-size: 10px;
+  line-height: 12px;
+  font-family: CircuralStdBold;
+  letter-spacing: 16%;
+  text-transform: uppercase;
+}
+// Body
+@mixin Body1 {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: CircuralStd;
+}
+@mixin Body2 {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: CircuralStd;
+}
+@mixin Body3 {
+  font-size: 10px;
+  line-height: 12px;
+  font-family: CircuralStd;
+}
+@mixin Body4 {
+  font-size: 12px;
+  line-height: 14px;
+  font-family: CircuralStd;
+  letter-spacing: 6%;
+}
+
+// -------------Colors-------------
+// Primary
+$primary: #1db954;
+// Secondary
+$secondary1: #000000;
+$secondary2: #393939;
+$secondary3: #191414;
+$secondary4: #ffffff;
+// Neutral
+$neutral1: #b3b3b3;
+$neutral2: #777777;
+$neutral3: #535353;
+// Other
+$cyan: #3dd5f3;
+$blue: #3d8bfd;
+$purple: #8c68cd;
+$pink: #de5c9d;
+$red: #e35d6a;
+$orange: #fd9843;
+$yellow: #ffcd39;
+$teal: #4dd4ac;
+// -------------Gradient Colors-------------
+@mixin gradientBackground1 {
+  background: linear-gradient(to right, #3dd5f3, #3d8bfd);
+}
+@mixin gradientBackground2 {
+  background: linear-gradient(to right, #3d8bfd, #8c68cd);
+}
+@mixin gradientBackground3 {
+  background: linear-gradient(to right, #8c68cd, #de5c9d);
+}
+@mixin gradientBackground4 {
+  background: linear-gradient(to right, #de5c9d, #e35d6a);
+}
+@mixin gradientBackground5 {
+  background: linear-gradient(to right, #e35d6a, #fd9843);
+}
+@mixin gradientBackground6 {
+  background: linear-gradient(to right, #ffcd39, #4dd4ac);
+}
+@mixin gradientBackground7 {
+  background: linear-gradient(to right, #1db954, #4dd4ac);
+}
