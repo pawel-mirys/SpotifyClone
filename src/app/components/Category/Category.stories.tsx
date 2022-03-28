@@ -1,13 +1,18 @@
-import { ComponentStory } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Category } from './Category';
+
+export default {
+  title: 'Category',
+  component: Category,
+} as ComponentMeta<typeof Category>;
 
 const Template: ComponentStory<typeof Category> = (args) => (
   <Category {...args} />
 );
 
-export const Liked = Template.bind({});
-Liked.args = {
+export const LikedSongs = Template.bind({});
+LikedSongs.args = {
   text: 'Liked Songs',
   variant: 'liked',
 };
