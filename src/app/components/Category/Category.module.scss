@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+.categoryWrapper {
+  display: flex;
+  align-items: center;
+  width: 316px;
+  height: 64px;
+  border-radius: 77px;
+  padding: 0 80px 0 0;
+  background-color: rgba($secondary4, 0.1);
+  // Temporary
+  margin: 20px 0 0 20px;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba($secondary4, 0.3);
+  }
+  .text {
+    margin-left: 24px;
+    @include Header3;
+    color: $secondary4;
+  }
+}

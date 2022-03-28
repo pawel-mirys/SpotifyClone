@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+.iconWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 81px;
+}
+.liked {
+  @include gradientBackground3;
+}
+.recently {
+  @include gradientBackground2;
+}
+.friends {
+  @include gradientBackground1;
+}

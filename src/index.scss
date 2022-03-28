@@ -1,12 +1,18 @@
 @import './app/variables.scss';
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, CircuralStd, CircuralStdBold,
     CircuralStdLight, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 50px;
+  background-color: $neutral3;
 }
 
 code {
