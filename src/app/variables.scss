@@ -20,32 +20,32 @@
 @mixin Header1 {
   font-size: 80px;
   line-height: 96px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
 }
 @mixin Header2 {
   font-size: 32px;
   line-height: 40px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
 }
 @mixin Header3 {
   font-size: 20px;
   line-height: 24px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
 }
 @mixin Header4 {
   font-size: 14px;
   line-height: 16px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
 }
 @mixin Header5 {
   font-size: 12px;
   line-height: 12px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
 }
 @mixin Header6 {
   font-size: 10px;
   line-height: 12px;
-  font-family: CircuralStdBold;
+  font-family: CircuralStd;
   letter-spacing: 16%;
   text-transform: uppercase;
 }
@@ -114,4 +114,13 @@ $teal: #4dd4ac;
 }
 @mixin gradientBackground7 {
   background: linear-gradient(to right, #1db954, #4dd4ac);
+}
+
+//  -------------Other-------------
+
+@mixin flex($justify: none, $align: none, $direction: none) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
