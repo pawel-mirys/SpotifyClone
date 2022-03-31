@@ -8,12 +8,12 @@
   height: 64px;
   border-radius: 81px;
 }
-.liked {
+.pinkGradient {
   @include gradientBackground3;
 }
-.recently {
+.purpleGradient {
   @include gradientBackground2;
 }
-.friends {
+.blueGradient {
   @include gradientBackground1;
 }
