@@ -1,11 +1,5 @@
 {
-  "ignorePatterns": [
-    "src/serviceWorker.ts",
-    "src/api/storyblok/storyblokApi.tsx",
-    "src/api/payments/paymentsApi.tsx",
-    "createPalette.d.ts",
-    "createMuiTheme.d.ts"
-  ],
+  "ignorePatterns": [],
   "extends": ["react-app", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
