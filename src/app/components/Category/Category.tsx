@@ -1,4 +1,4 @@
-import { Icon } from '../../ui/Icon/Icon';
+import { Icon } from '../../../ui/Icon/Icon';
 import styles from './Category.module.scss';
 
 type CategoryProps = {

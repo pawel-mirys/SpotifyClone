@@ -1,18 +1,15 @@
 // -------------Fonts-------------
 @font-face {
   font-family: 'CircuralStdBold';
-  src: local('CircuralStdBold'),
-    url(./assets/fonts/CircularStd-Black.otf) format('opentype');
+  src: local('CircuralStdBold'), url(./assets/fonts/CircularStd-Black.otf) format('opentype');
 }
 @font-face {
   font-family: 'CircuralStd';
-  src: local('CircuralStd'),
-    url(./assets/fonts/CircularStd-Medium.otf) format('opentype');
+  src: local('CircuralStd'), url(./assets/fonts/CircularStd-Medium.otf) format('opentype');
 }
 @font-face {
   font-family: 'CircuralStdLight';
-  src: local('CircuralStdLight'),
-    url(./assets/fonts/CircularStd-Light.otf) format('opentype');
+  src: local('CircuralStdLight'), url(./assets/fonts/CircularStd-Light.otf) format('opentype');
 }
 
 // -------------Text Styles-------------
