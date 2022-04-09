@@ -20,18 +20,15 @@ DefaultCategory.args = {
 export const LikedSongs = Template.bind({});
 LikedSongs.args = {
   text: 'Liked Songs',
-  variant: 'liked',
-  src: heart,
+  name: 'heart',
 };
 export const RecentlyAdded = Template.bind({});
 RecentlyAdded.args = {
   text: 'Recently Added',
-  variant: 'recently',
-  src: note,
+  name: 'note',
 };
 export const FriendsPlayed = Template.bind({});
 FriendsPlayed.args = {
   text: 'FriendsPlayed',
-  variant: 'friends',
-  src: friends,
+  name: 'friends',
 };

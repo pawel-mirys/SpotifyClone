@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import 'src/variables';
 .iconWrapper {
   display: flex;
   flex-direction: row;
@@ -8,6 +8,7 @@
   height: 64px;
   border-radius: 81px;
 }
+
 .pinkGradient {
   @include gradientBackground3;
 }

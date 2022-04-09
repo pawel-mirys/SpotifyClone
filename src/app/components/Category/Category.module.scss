@@ -19,3 +19,23 @@
     color: $secondary4;
   }
 }
+
+.iconWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 81px;
+}
+
+.pinkGradient {
+  @include gradientBackground3;
+}
+.purpleGradient {
+  @include gradientBackground2;
+}
+.blueGradient {
+  @include gradientBackground1;
+}

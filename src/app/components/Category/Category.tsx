@@ -1,17 +1,15 @@
-import { Icon } from '../../../ui/Icon/Icon';
+import { Icon } from 'ui/Icon/Icon';
 import styles from './Category.module.scss';
 
 type CategoryProps = {
-  src: string;
-  iconName: string;
+  name: 'heart' | 'note' | 'friends';
   text: string;
-  variant?: 'liked' | 'recently' | 'friends';
 };
 
-export const Category = ({ src, iconName, variant, text }: CategoryProps) => {
+export const Category = ({ name, text }: CategoryProps) => {
   return (
     <div className={styles.categoryWrapper}>
-      <Icon src={src} name={iconName} variant={variant} />
+      <Icon className={styles.icon} name={name} />
       <p className={styles.text}>{text}</p>
     </div>
   );

@@ -1,26 +1,24 @@
-import clsx from 'clsx';
+import { ReactComponent as Heart } from 'assets/icons/like3.svg';
+import { ReactComponent as Note } from 'assets/icons/music2.svg';
+import { ReactComponent as friends } from 'assets/icons/friends2.svg';
 
-import styles from './Icon.module.scss';
+const icons = {
+  heart: Heart,
+  note: Note,
+  friends: friends,
+} as const;
 
 type IconProps = {
-  src: string;
-  name: string;
+  name: keyof typeof icons;
   className?: string;
-  variant?: string;
 };
 
-export const Icon = ({ src, name, className, variant }: IconProps) => {
-  return (
-    <div
-      className={clsx(
-        styles.iconWrapper,
-        className,
-        variant === 'liked' && styles.pinkGradient,
-        variant === 'recently' && styles.purpleGradient,
-        variant === 'friends' && styles.blueGradient,
-      )}
-    >
-      {<img src={src} alt={name} />}
-    </div>
-  );
+export const Icon = ({ name, className, ...props }: IconProps) => {
+  const Component = icons[name];
+
+  if (Component) {
+    return <Component className={className} {...props} />;
+  }
+
+  throw new Error('Invalid icon name');
 };
