@@ -1,4 +1,5 @@
-@import '../../../variables.scss';
+@import 'src/variables';
+
 .categoryWrapper {
   display: flex;
   align-items: center;
@@ -31,11 +32,11 @@
 }
 
 .pinkGradient {
-  @include gradientBackground3;
+  @include gradientPink;
 }
 .purpleGradient {
-  @include gradientBackground2;
+  @include gradientPurple;
 }
 .blueGradient {
-  @include gradientBackground1;
+  @include gradientBlue;
 }

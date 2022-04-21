@@ -10,11 +10,11 @@
 }
 
 .pinkGradient {
-  @include gradientBackground3;
+  @include gradientPink;
 }
 .purpleGradient {
-  @include gradientBackground2;
+  @include gradientPurple;
 }
 .blueGradient {
-  @include gradientBackground1;
+  @include gradientBlue;
 }

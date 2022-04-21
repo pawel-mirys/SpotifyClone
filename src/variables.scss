@@ -91,25 +91,25 @@ $orange: #fd9843;
 $yellow: #ffcd39;
 $teal: #4dd4ac;
 // -------------Gradient Colors-------------
-@mixin gradientBackground1 {
+@mixin gradientBlue {
   background: linear-gradient(to right, #3dd5f3, #3d8bfd);
 }
-@mixin gradientBackground2 {
+@mixin gradientPurple {
   background: linear-gradient(to right, #3d8bfd, #8c68cd);
 }
-@mixin gradientBackground3 {
+@mixin gradientPink {
   background: linear-gradient(to right, #8c68cd, #de5c9d);
 }
-@mixin gradientBackground4 {
+@mixin gradientRed {
   background: linear-gradient(to right, #de5c9d, #e35d6a);
 }
-@mixin gradientBackground5 {
+@mixin gradientOrange {
   background: linear-gradient(to right, #e35d6a, #fd9843);
 }
-@mixin gradientBackground6 {
+@mixin gradientYellow {
   background: linear-gradient(to right, #ffcd39, #4dd4ac);
 }
-@mixin gradientBackground7 {
+@mixin gradientGreen {
   background: linear-gradient(to right, #1db954, #4dd4ac);
 }
 
