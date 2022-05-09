@@ -8,7 +8,7 @@ const icons = {
   friends: friends,
 } as const;
 
-type IconProps = {
+export type IconProps = {
   name: keyof typeof icons;
   className?: string;
 };

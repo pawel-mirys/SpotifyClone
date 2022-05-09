@@ -1,10 +1,10 @@
 import clsx from 'clsx';
 
-import { Icon } from 'ui/Icon/Icon';
+import { Icon, IconProps } from 'ui/Icon/Icon';
 import styles from './Category.module.scss';
 
 type CategoryProps = {
-  name: 'heart' | 'note' | 'friends';
+  name: IconProps['name'];
   text: string;
   iconStyle?: 'pink' | 'blue' | 'purple';
   className?: string;
