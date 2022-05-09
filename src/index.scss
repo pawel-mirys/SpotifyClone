@@ -1,4 +1,4 @@
-@import './app/variables.scss';
+@import 'src/variables';
 
 * {
   margin: 0;
@@ -8,14 +8,12 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, CircuralStd, CircuralStdBold,
-    CircuralStdLight, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, CircuralStd, CircuralStdBold, CircuralStdLight, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $neutral3;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
