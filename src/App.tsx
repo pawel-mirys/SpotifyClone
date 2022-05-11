@@ -1,12 +1,18 @@
 import React from 'react';
 
 import './App.scss';
-import { Cover } from 'ui/Cover/Cover';
+import { Card } from 'app/components/Card/Card';
 
 function App() {
   return (
     <div className="App">
-      <Cover name="dailyMix1" />
+      <Card
+        cardType="personal"
+        title="Daily Mix 1"
+        coverName="dailyMix1"
+        description="Your weekly mixtape of fresh music. Enjoy new..."
+      />
+      <Card cardType="playlist" title="My Playlist" coverName="dailyMix2" />
     </div>
   );
 }

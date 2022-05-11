@@ -1,0 +1,48 @@
+@import 'src/variables';
+
+.cardContainer {
+  @include flex(space-between, center, column);
+  width: 176px;
+  border-radius: 8px;
+  background-color: rgba($neutral1, 0.1);
+  &:hover {
+    background-color: rgba($neutral1, 0.3);
+  }
+  cursor: pointer;
+  &.playlist {
+    height: 218px;
+    padding: 8px 8px 16px 8px;
+    gap: 8px;
+  }
+  &.personal {
+    height: 244px;
+    padding: 8px;
+    gap: 16px;
+  }
+  //   temporary
+  margin: 20px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 148px;
+  margin: 0 auto;
+  &.wrapperPersonal {
+    height: 52px;
+    flex-direction: column;
+  }
+  &.wrapperPlaylist {
+    height: 18px;
+  }
+}
+
+.cardTitle {
+  @include Header4;
+  color: $secondary4;
+}
+.cardDescription {
+  @include Body2;
+  color: $neutral1;
+  overflow: hidden;
+}
