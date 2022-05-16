@@ -46,3 +46,25 @@
   color: $neutral1;
   overflow: hidden;
 }
+.coverWrapper {
+  position: relative;
+}
+.playButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: $primary;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.followIcon {
+  width: 18px;
+  height: 18px;
+}
