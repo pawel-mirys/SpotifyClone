@@ -1,15 +1,27 @@
-import { CategoryIcon } from '../CategoryIcon/CategoryIcon';
+import clsx from 'clsx';
+
+import { Icon, IconProps } from 'ui/Icon/Icon';
 import styles from './Category.module.scss';
 
 type CategoryProps = {
+  name: IconProps['name'];
   text: string;
-  variant: 'liked' | 'recently' | 'friends';
+  iconStyle?: 'pink' | 'blue' | 'purple';
+  className?: string;
 };
 
-export const Category = ({ text, variant }: CategoryProps) => {
+export const Category = ({ name, text, iconStyle, className }: CategoryProps) => {
   return (
     <div className={styles.categoryWrapper}>
-      <CategoryIcon variant={variant} />
+      <div
+        className={clsx(className, styles.iconWrapper, {
+          [styles.blueGradient]: iconStyle === 'blue',
+          [styles.purpleGradient]: iconStyle === 'purple',
+          [styles.pinkGradient]: iconStyle === 'pink',
+        })}
+      >
+        <Icon className={styles.icon} name={name} />
+      </div>
       <p className={styles.text}>{text}</p>
     </div>
   );

@@ -1,4 +1,5 @@
-@import '../../variables.scss';
+@import 'src/variables';
+
 .categoryWrapper {
   display: flex;
   align-items: center;
@@ -18,4 +19,24 @@
     @include Header3;
     color: $secondary4;
   }
+}
+
+.iconWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 81px;
+}
+
+.pinkGradient {
+  @include gradientPink;
+}
+.purpleGradient {
+  @include gradientPurple;
+}
+.blueGradient {
+  @include gradientBlue;
 }

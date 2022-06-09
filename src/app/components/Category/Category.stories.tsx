@@ -7,22 +7,29 @@ export default {
   component: Category,
 } as ComponentMeta<typeof Category>;
 
-const Template: ComponentStory<typeof Category> = (args) => (
-  <Category {...args} />
-);
+const Template: ComponentStory<typeof Category> = (args) => <Category {...args} />;
+
+export const DefaultCategory = Template.bind({});
+DefaultCategory.args = {
+  text: 'Default',
+  name: 'friends',
+};
 
 export const LikedSongs = Template.bind({});
 LikedSongs.args = {
   text: 'Liked Songs',
-  variant: 'liked',
+  name: 'heart',
+  iconStyle: 'pink',
 };
 export const RecentlyAdded = Template.bind({});
 RecentlyAdded.args = {
   text: 'Recently Added',
-  variant: 'recently',
+  name: 'note',
+  iconStyle: 'purple',
 };
 export const FriendsPlayed = Template.bind({});
 FriendsPlayed.args = {
   text: 'FriendsPlayed',
-  variant: 'friends',
+  name: 'friends',
+  iconStyle: 'blue',
 };
