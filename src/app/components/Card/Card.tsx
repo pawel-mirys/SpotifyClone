@@ -15,7 +15,6 @@ export type Card = {
 };
 
 export const Card = ({ cardType, title, description, className, coverName }: Card) => {
-  const [focus, setFocus] = useState(false);
   const [follow, setFollow] = useState(false);
 
   return (
@@ -24,12 +23,6 @@ export const Card = ({ cardType, title, description, className, coverName }: Car
         onClick={() => {
           console.log(`Open playlist: ${title}`);
         }}
-        onMouseEnter={() => {
-          setFocus(true);
-        }}
-        onMouseLeave={() => {
-          setFocus(false);
-        }}
         className={clsx(className, styles.cardContainer, {
           [styles.playlist]: cardType === 'playlist',
           [styles.personal]: cardType === 'personal',
@@ -37,15 +30,13 @@ export const Card = ({ cardType, title, description, className, coverName }: Car
       >
         <div className={styles.coverWrapper}>
           <Cover name={coverName} />
-          {focus === true && (
-            <IconButton
-              className={styles.playButton}
-              onClick={() => {
-                console.log(`Run: ${title}`);
-              }}
-              children={<Icon name="play" />}
-            />
-          )}
+          <IconButton
+            className={styles.playButton}
+            onClick={() => {
+              console.log(`Run: ${title}`);
+            }}
+            children={<Icon name="play" />}
+          />
         </div>
         <div
           className={clsx(styles.titleWrapper, {

@@ -7,6 +7,9 @@
   background-color: rgba($neutral1, 0.1);
   &:hover {
     background-color: rgba($neutral1, 0.3);
+    .playButton {
+      display: block;
+    }
   }
   cursor: pointer;
   &.playlist {
@@ -50,6 +53,7 @@
   position: relative;
 }
 .playButton {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -60,7 +64,7 @@
   border: none;
   background-color: $primary;
   &:hover {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 }
 
