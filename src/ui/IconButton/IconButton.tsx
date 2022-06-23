@@ -1,5 +1,7 @@
 import clsx from 'clsx';
+
 import { ReactElement } from 'react';
+
 import styles from './IconButton.module.scss';
 
 type IconButtonProps = {

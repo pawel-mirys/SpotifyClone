@@ -1,71 +1,58 @@
 import clsx from 'clsx';
-import { useState } from 'react';
 
 import { Cover, CoverProps } from 'ui/Cover/Cover';
 import { Icon } from 'ui/Icon/Icon';
 import { IconButton } from 'ui/IconButton/IconButton';
 import styles from './Card.module.scss';
 
-export type Card = {
-  cardType: 'personal' | 'playlist';
+export type CardProps = {
+  cardType: 'personal' | 'system';
   title: string;
   description?: string;
   coverName: CoverProps['name'];
   className?: string;
+  followed?: boolean;
 };
 
-export const Card = ({ cardType, title, description, className, coverName }: Card) => {
-  const [follow, setFollow] = useState(false);
+export const Card = ({ followed, cardType, title, description, className, coverName }: CardProps) => {
+  const isPersonalPlaylist = cardType === 'personal';
+  const isSystemPlaylist = cardType === 'system';
 
   return (
-    <>
+    <div
+      onClick={() => {
+        console.log(`Open playlist: ${title}`);
+      }}
+      className={clsx(className, styles.cardContainer, {
+        [styles.system]: isSystemPlaylist,
+        [styles.personal]: isPersonalPlaylist,
+      })}
+    >
+      <div className={styles.coverWrapper}>
+        <Cover name={coverName} />
+        <IconButton
+          className={styles.playButton}
+          onClick={() => {
+            console.log(`Run: ${title}`);
+          }}
+        >
+          <Icon name={'play'} />
+        </IconButton>
+      </div>
       <div
-        onClick={() => {
-          console.log(`Open playlist: ${title}`);
-        }}
-        className={clsx(className, styles.cardContainer, {
-          [styles.playlist]: cardType === 'playlist',
-          [styles.personal]: cardType === 'personal',
+        className={clsx(styles.titleWrapper, {
+          [styles.wrapperPlaylist]: isSystemPlaylist,
+          [styles.wrapperPersonal]: isPersonalPlaylist,
         })}
       >
-        <div className={styles.coverWrapper}>
-          <Cover name={coverName} />
-          <IconButton
-            className={styles.playButton}
-            onClick={() => {
-              console.log(`Run: ${title}`);
-            }}
-            children={<Icon name="play" />}
-          />
-        </div>
-        <div
-          className={clsx(styles.titleWrapper, {
-            [styles.wrapperPlaylist]: cardType === 'playlist',
-            [styles.wrapperPersonal]: cardType === 'personal',
-          })}
-        >
-          <h4 className={styles.cardTitle}>{title}</h4>
-          {cardType === 'personal' && <p className={styles.cardDescription}>{description}</p>}
-          {cardType === 'playlist' && !follow && (
-            <IconButton
-              onClick={() => {
-                setFollow(true);
-                console.log(`Follow: ${title}`);
-              }}
-              children={<Icon className={styles.followIcon} name="follow" />}
-            />
-          )}
-          {cardType === 'playlist' && follow && (
-            <IconButton
-              onClick={() => {
-                setFollow(false);
-                console.log(`Unfollow: ${title}`);
-              }}
-              children={<Icon className={styles.followIcon} name="unfollow" />}
-            />
-          )}
-        </div>
+        <h4 className={styles.cardTitle}>{title}</h4>
+        {isPersonalPlaylist && <p className={styles.cardDescription}>{description}</p>}
+        {isSystemPlaylist && (
+          <IconButton onClick={() => {}}>
+            <Icon className={styles.followIcon} name={followed ? 'follow' : 'follow'} />
+          </IconButton>
+        )}
       </div>
-    </>
+    </div>
   );
 };

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './App.scss';
 import { Card } from 'app/components/Card/Card';
 
@@ -12,7 +10,7 @@ function App() {
         coverName="dailyMix1"
         description="Your weekly mixtape of fresh music. Enjoy new..."
       />
-      <Card cardType="playlist" title="My Playlist" coverName="dailyMix2" />
+      <Card cardType="system" title="My Playlist" coverName="dailyMix2" />
     </div>
   );
 }
