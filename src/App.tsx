@@ -1,14 +1,16 @@
-import React from 'react';
-
 import './App.scss';
-import { Category } from 'app/components/Category/Category';
+import { Card } from 'app/components/Card/Card';
 
 function App() {
   return (
     <div className="App">
-      <Category text="Liked Songs" name="heart" iconStyle="pink" />
-      <Category text="Recently Played" name="note" iconStyle="purple" />
-      <Category text="Friends Played" name="friends" iconStyle="blue" />
+      <Card
+        cardType="personal"
+        title="Daily Mix 1"
+        coverName="dailyMix1"
+        description="Your weekly mixtape of fresh music. Enjoy new..."
+      />
+      <Card cardType="system" title="My Playlist" coverName="dailyMix2" />
     </div>
   );
 }
